@@ -1,47 +1,88 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-    <title>Notícia</title>
-    <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
+  <title>👻 News - Slenderverse</title>
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body style="background-color: black; color: white;">
-    <h1>The Children who saw the slenderman</h1>
-    <p>The Slender Man is a widely popular internet urban legend, horror icon, and very commonly the titular main antagonist of many stories involving him. Slender Man is a humanoid creature with a vast array of supernatural powers and abilities, his most common hobbies include kidnapping children and brainwashing innocent people into becoming his proxies. Due to his popularity, Slender Man has been seen as one of the most famous urban legends and horror icons of the internet.</p>
-    <blockquote>
-        “We didn't want to go, we didn't want to kill them, but its persistent silence and outstretched arms horrified and comforted us at the same time...”
-        <p style="text-align: right;">~ Caption from the original Slender Man post on the Something Awful forums.</p>
-    </blockquote>
-<!--    <ul>
-        <li>Skbid toilet</li>
-    </ul>
--->
-    <h3 style="margin-left: 10px;">Most Danger SCP:</h3>
-    <ol>
-        <li style="display: flex; align-items: flex-start; gap: 20px">
-            <img
-              style="border-radius: 15%;"
-              width="50%"
-              src="https://th.bing.com/th/id/OIP.ocWJRj0Lfzhr0m4Hmw5-yQHaK0?rs=1&pid=ImgDetMain"
-              alt="skibid-toilet"
-            />
-            <div>
-              <strong style="text-align: start;">Skibidi Toi-let</strong>
-              <p>
-                A bizarre and viral internet phenomenon, Skibidi Toilets are humanoid heads emerging from toilets. While originally comedic, the lore evolves into a chaotic battle between species, full of weird tech and twisted logic.
-              </p>
-            </div>
-          </li>
-          
-        <h3>
-            <li style="display: flex;">Slenderman:</h3> <br>
-                <img width="50%"
-                alt="slenderman" 
-                src="https://th.bing.com/th/id/OIP.xcHgRtNko6hYEsIwzSba4wHaKq?rs=1&pid=ImgDetMain">
-                
-            </li>
-        <h3><li>John Pork:</h3> <br> <img alt="Jhon" width="25%" src="https://i.pinimg.com/originals/f2/c1/cc/f2c1cc34fb744a477e0710687635a604.jpg"></li>
-    </ol>
-    <p>Fonte:<a target="_blank" href="https://creepypastabrasil.fandom.com/pt-br/wiki/Slenderman">Fandoon</a></p>
+<body>
+  <!-- Música ambiente SoundCloud (invisível) -->
+  <iframe style="width: 0; height: 0; opacity: 0; position: absolute"
+          scrolling="no" frameborder="no" allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/myuu/growing-shadows-creepy-ambient-music&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=false">
+  </iframe>
 
+  <h1 class="flicker">The Children Who Saw the Slenderman</h1>
+
+  <p class="fade-in">
+    Slender Man is a popular internet urban legend and horror icon...
+  </p>
+
+  <blockquote class="fade-in">
+    “We didn't want to go, we didn't want to kill them...”
+    <p style="text-align: right">~ Original caption from the Something Awful forum.</p>
+  </blockquote>
+
+  <h3 class="fade-in">Most Dangerous Entities:</h3>
+  <ol class="fade-in">
+    <li class="entity">
+      <img src="https://th.bing.com/th/id/OIP.ocWJRj0Lfzhr0m4Hmw5-yQHaK0?rs=1&pid=ImgDetMain" alt="skibid-toilet"/>
+      <div><strong>Skibidi Toilet</strong><p>A bizarre viral internet phenomenon...</p></div>
+    </li>
+    <li class="entity">
+      <img src="https://th.bing.com/th/id/OIP.xcHgRtNko6hYEsIwzSba4wHaKq?rs=1&pid=ImgDetMain" alt="slenderman"/>
+      <div><strong>Slenderman</strong><p>A tall, faceless entity with long limbs...</p></div>
+    </li>
+    <li class="entity">
+      <img src="https://i.pinimg.com/originals/f2/c1/cc/f2c1cc34fb744a477e0710687635a604.jpg" alt="john pork"/>
+      <div><strong>John Pork</strong><p>A surreal digital entity: a man with a pig's head...</p></div>
+    </li>
+  </ol>
+
+  <div class="center fade-in">
+    <a class="botao" href="https://creepypastabrasil.fandom.com/pt-br/wiki/Slenderman" target="_blank">
+      View on Fandoon
+    </a>
+  </div>
+
+  <div class="center fade-in">
+    <button class="botao" id="play-random-audio">Play Random Audio</button>
+  </div>
+
+  <!-- Pop-up com Vídeos -->
+  <div class="popup" id="rickroll-popup">
+    <div class="popup-content">
+      <button class="popup-close" id="close-popup">X</button>
+      
+      <!-- Vídeos -->
+      <video id="rickroll-video" class="popup-video" controls autoplay>
+        <source src="videos/rickroll.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      
+      <video id="video-2" class="popup-video" controls autoplay>
+        <source src="videos/racism-lore.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      
+      <video id="video-3" class="popup-video" controls autoplay>
+        <source src="videos/gato.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      
+      <video id="video-4" class="popup-video" controls autoplay>
+        <source src="videos/racism-lore.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      
+      <video id="video-5" class="popup-video" controls autoplay>
+        <source src="videos/racism-lore.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(#000000, #1a1a1a);
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  cursor: url('https://cur.cursors-4u.net/horror/hor-3/hor266.cur'), auto;
+}
+
+h1 {
+  font-family: "Creepster", cursive;
+  font-size: 3.5em;
+  text-align: center;
+  animation: flicker 2s infinite, glow 2s ease-in-out infinite alternate;
+  margin-top: 40px;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #ff0000; }
+  to { text-shadow: 0 0 30px crimson; }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+p, blockquote, li {
+  font-size: 1.1em;
+  line-height: 1.6;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+blockquote {
+  border-left: 4px solid crimson;
+  background-color: rgba(255, 0, 0, 0.05);
+  margin: 20px;
+  font-style: italic;
+}
+
+h3 {
+  color: crimson;
+  padding-left: 20px;
+  margin-top: 40px;
+}
+
+ol {
+  padding-left: 40px;
+}
+
+.entity {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.entity img {
+  width: 40%;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.entity img:hover {
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 0 20px crimson;
+}
+
+.botao {
+  display: inline-block;
+  padding: 12px 25px;
+  margin: 20px auto;
+  font-size: 1.1em;
+  background: crimson;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.botao:hover {
+  background: darkred;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px crimson;
+}
+
+.center {
+  text-align: center;
+}
+
+/* Pop-up */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup.show {
+  display: flex;
+}
+
+.popup-content {
+  position: relative;
+  background: #111;
+  padding: 20px;
+  border: 3px solid crimson;
+  border-radius: 10px;
+  box-shadow: 0 0 25px #000;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-close {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  font-size: 1.5em;
+  color: #fff;
+  background: crimson;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  z-index: 1001;
+}
+
+.popup-close:hover {
+  background: darkred;
+}
+
+/* Vídeo responsivo no popup */
+.popup-content video {
+  width: 100%;
+  height: auto;
+  max-height: 90vh;
+  border-radius: 10px;
+  box-shadow: 0 0 15px crimson;
+}
